@@ -16,9 +16,11 @@ import javax.swing.JOptionPane;
  */
 public class sipukiii extends javax.swing.JFrame {
     private void kosongkan_form(){
-        txtnama.setEditable(true);
-        txtusername.setText(null);
-        txtemail.setText(null);
+        txtnoken.setEditable(true);
+        txtnorang.setEditable(true);
+        txtnamaPemilik.setText(null);
+        txtmerk1.setText(null);
+        txtjenis1.setText(null);
     }
 
     /**
@@ -40,18 +42,18 @@ public class sipukiii extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         alamat = new javax.swing.JLabel();
-        txtusername = new javax.swing.JTextField();
-        jenis2 = new javax.swing.JLabel();
-        txtemail = new javax.swing.JTextField();
         namaPemilik = new javax.swing.JLabel();
-        txtnama = new javax.swing.JTextField();
-        jenis = new javax.swing.JLabel();
-        jenis1 = new javax.swing.JLabel();
-        txtulangi = new javax.swing.JPasswordField();
-        txtpassword = new javax.swing.JPasswordField();
+        txtnoken = new javax.swing.JTextField();
         tbSave = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        txtnorang = new javax.swing.JTextField();
+        namaPemilik1 = new javax.swing.JLabel();
+        txtnamaPemilik = new javax.swing.JTextField();
+        merk = new javax.swing.JLabel();
+        txtmerk1 = new javax.swing.JTextField();
+        jenis3 = new javax.swing.JLabel();
+        txtjenis1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,39 +68,15 @@ public class sipukiii extends javax.swing.JFrame {
 
         alamat.setText("Nomer Rangka           : ");
 
-        txtusername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusernameActionPerformed(evt);
-            }
-        });
-
-        jenis2.setText("Jenis                        :");
-
-        txtemail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtemailActionPerformed(evt);
-            }
-        });
-
         namaPemilik.setText("Nomer Kendaraan       :");
 
-        txtnama.addActionListener(new java.awt.event.ActionListener() {
+        txtnoken.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnamaActionPerformed(evt);
+                txtnokenActionPerformed(evt);
             }
         });
 
-        jenis.setText("Nama Pemilik             :");
-
-        jenis1.setText("Merk                         :");
-
-        txtpassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpasswordActionPerformed(evt);
-            }
-        });
-
-        tbSave.setText("SAVE");
+        tbSave.setText("CEK");
         tbSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tbSaveActionPerformed(evt);
@@ -110,6 +88,36 @@ public class sipukiii extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel3.setText("       Si PUKI     ");
+
+        txtnorang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnorangActionPerformed(evt);
+            }
+        });
+
+        namaPemilik1.setText("Nama Pemilik");
+
+        txtnamaPemilik.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnamaPemilikActionPerformed(evt);
+            }
+        });
+
+        merk.setText("Merk");
+
+        txtmerk1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmerk1ActionPerformed(evt);
+            }
+        });
+
+        jenis3.setText("Jenis");
+
+        txtjenis1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtjenis1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,35 +136,40 @@ public class sipukiii extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(namaPemilik)
-                        .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(namaPemilik)
+                                .addGap(34, 34, 34)
+                                .addComponent(txtnoken, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(82, 82, 82)
                                 .addComponent(alamat)
-                                .addGap(32, 32, 32)
-                                .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButton2)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(tbSave))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jenis)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jenis2)
-                                            .addComponent(jenis1)))
-                                    .addGap(27, 27, 27)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtulangi, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(72, 72, 72))
+                                .addGap(26, 26, 26)
+                                .addComponent(txtnorang, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(164, 164, 164)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jenis3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtjenis1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(merk)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtmerk1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(namaPemilik1)
+                                        .addGap(108, 108, 108)
+                                        .addComponent(txtnamaPemilik, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(78, 78, 78))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(472, 472, 472))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tbSave)
+                .addGap(343, 343, 343))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,26 +181,26 @@ public class sipukiii extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(alamat)
-                    .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(namaPemilik))
-                .addGap(26, 26, 26)
+                    .addComponent(txtnoken, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(namaPemilik)
+                    .addComponent(txtnorang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jenis)
-                    .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(namaPemilik1)
+                    .addComponent(txtnamaPemilik, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jenis1)
-                    .addComponent(txtulangi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtmerk1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(merk))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jenis2)
-                    .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                    .addComponent(txtjenis1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jenis3))
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tbSave)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
+                    .addComponent(jButton2)
+                    .addComponent(tbSave))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
         );
@@ -200,26 +213,14 @@ public class sipukiii extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
+    private void txtnokenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnokenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusernameActionPerformed
-
-    private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtemailActionPerformed
-
-    private void txtnamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnamaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtnamaActionPerformed
-
-    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpasswordActionPerformed
+    }//GEN-LAST:event_txtnokenActionPerformed
 
     private void tbSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbSaveActionPerformed
         // TODO add your handling code here:
         try{
-            String sql ="INSERT INTO karyawan VALUES ('"+txtnama.getText()+"','"+txtusername.getText()+"','"+txtpassword.getText()+"','"+txtulangi.getText()+"','"+txtemail.getText()+"')";
+            String sql ="INSERT INTO karyawan VALUES ('"+txtnoken.getText()+"','"+txtnorang.getText()+"','"+txtnamaPemilik.getText()+"','"+txtjenis1.getText()+"','"+txtmerk1.getText()+"')";
             java.sql.Connection conn = (Connection)Konfig.configDB();
             java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
@@ -228,6 +229,22 @@ public class sipukiii extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_tbSaveActionPerformed
+
+    private void txtnorangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnorangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnorangActionPerformed
+
+    private void txtnamaPemilikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnamaPemilikActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnamaPemilikActionPerformed
+
+    private void txtmerk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmerk1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmerk1ActionPerformed
+
+    private void txtjenis1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtjenis1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtjenis1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,15 +287,15 @@ public class sipukiii extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jenis;
-    private javax.swing.JLabel jenis1;
-    private javax.swing.JLabel jenis2;
+    private javax.swing.JLabel jenis3;
+    private javax.swing.JLabel merk;
     private javax.swing.JLabel namaPemilik;
+    private javax.swing.JLabel namaPemilik1;
     private javax.swing.JButton tbSave;
-    private javax.swing.JTextField txtemail;
-    private javax.swing.JTextField txtnama;
-    private javax.swing.JPasswordField txtpassword;
-    private javax.swing.JPasswordField txtulangi;
-    private javax.swing.JTextField txtusername;
+    private javax.swing.JTextField txtjenis1;
+    private javax.swing.JTextField txtmerk1;
+    private javax.swing.JTextField txtnamaPemilik;
+    private javax.swing.JTextField txtnoken;
+    private javax.swing.JTextField txtnorang;
     // End of variables declaration//GEN-END:variables
 }
